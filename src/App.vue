@@ -2,7 +2,7 @@
   <v-app class="grey lighten-4">
     <Navbar/>
     <v-content>
-      <v-container grid-list-md fluid>
+      <v-container grid-list-md>
         <router-view></router-view>
       </v-container>
     </v-content>

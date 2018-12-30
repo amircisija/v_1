@@ -39,7 +39,7 @@ export default {
         { icon: "dashboard", text: "Dashboard", route: "/" },
         { icon: "folder", text: "My Projects", route: "/projects" },
         { icon: "person", text: "Team", route: "/team" },
-        { icon: "person", text: "About", route: "/about" }
+        { icon: "perm_identity", text: "About", route: "/about" }
       ]
     };
   }
