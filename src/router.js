@@ -3,7 +3,7 @@ import Router from "vue-router";
 import Dashboard from "./views/Dashboard.vue";
 import Projects from "./views/Projects.vue";
 import About from "./views/About.vue";
-import Team from "./views/Team.vue";
+import Anbieter from "./views/Anbieter.vue";
 
 Vue.use(Router);
 
@@ -27,9 +27,9 @@ export default new Router({
       component: About
     },
     {
-      path: "/team",
-      name: "team",
-      component: Team
+      path: "/anbieter",
+      name: "anbieter",
+      component: Anbieter
     }
   ]
 });

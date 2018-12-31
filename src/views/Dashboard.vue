@@ -1,6 +1,11 @@
 <template>
   <div>
-    <div class="mb-3" row wrap>
+    <v-layout row wrap>
+      <v-flex xs12>
+        <h3>Dashboard</h3>
+      </v-flex>
+    </v-layout>
+    <v-layout class="mb-3" row wrap>
       <v-tooltip top>
         <v-btn small flat color="grey" @click="sortBy('name')" slot="activator">
           <v-icon left small>person</v-icon>
@@ -15,11 +20,12 @@
         </v-btn>
         <span>Sort Bookings Booking Status</span>
       </v-tooltip>
-    </div>
+    </v-layout>
     <v-card
       :class="`pa-3 booking--row status--${booking.status}`"
       v-for="booking in bookings"
       :key="booking._id"
+      transition="booking"
     >
       <v-layout row wrap>
         <v-flex xs12 md4>
@@ -67,7 +73,6 @@ export default {
     axios
       .get(URL)
       .then(response => {
-        // JSON responses are automatically parsed.
         this.bookings = response.data;
       })
       .catch(e => {

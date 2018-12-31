@@ -27,4 +27,7 @@ export default {
 p {
   font-size: 16px;
 }
+body {
+  font-family: "Roboto", sans-serif;
+}
 </style>

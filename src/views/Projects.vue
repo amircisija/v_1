@@ -1,6 +1,10 @@
 <template>
-  <div class="about">
-    <h1>Projects</h1>
+  <div>
+    <v-layout row wrap>
+      <v-flex xs12>
+        <h3>Projects</h3>
+      </v-flex>
+    </v-layout>
   </div>
 </template>
 

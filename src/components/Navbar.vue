@@ -16,6 +16,13 @@
     </v-toolbar>
 
     <v-navigation-drawer app v-model="drawer" class="blue darken-2 pa-3">
+      <v-layout column align-center>
+        <v-flex class="mt-3 mb-5">
+          <v-avatar size="100">
+            <img src="https://api.adorable.io/avatars/176/testuser@user.me.png" alt>
+          </v-avatar>
+        </v-flex>
+      </v-layout>
       <v-list>
         <v-list-tile v-for="link in links" :key="link.text" router :to="link.route">
           <v-list-tile-action>
@@ -37,8 +44,8 @@ export default {
       drawer: false,
       links: [
         { icon: "dashboard", text: "Dashboard", route: "/" },
-        { icon: "folder", text: "My Projects", route: "/projects" },
-        { icon: "person", text: "Team", route: "/team" },
+        { icon: "folder", text: "Projects", route: "/projects" },
+        { icon: "person", text: "Anbieter", route: "/anbieter" },
         { icon: "perm_identity", text: "About", route: "/about" }
       ]
     };
