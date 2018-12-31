@@ -4,7 +4,7 @@ import Dashboard from "./views/Dashboard.vue";
 import Projects from "./views/Projects.vue";
 import About from "./views/About.vue";
 import Anbieter from "./views/Anbieter.vue";
-
+import Test from "./views/Test.vue";
 Vue.use(Router);
 
 export default new Router({
@@ -30,6 +30,11 @@ export default new Router({
       path: "/anbieter",
       name: "anbieter",
       component: Anbieter
+    },
+    {
+      path: "/test",
+      name: "test",
+      component: Test
     }
   ]
 });
