@@ -21,23 +21,23 @@
 </template>
 
 <script>
-import axios from "axios";
-const URL = "http://www.json-generator.com/api/json/get/cfUnXzSklK?indent=2";
+import axios from 'axios';
+const URL = 'http://www.json-generator.com/api/json/get/cfUnXzSklK?indent=2';
 export default {
-  data() {
-    return {
-      cars: []
-    };
-  },
-  mounted() {
-    axios
-      .get(URL)
-      .then(response => {
-        this.cars = response.data;
-      })
-      .catch(e => {
-        this.errors.push(e);
-      });
-  }
+    data() {
+        return {
+            cars: []
+        };
+    },
+    mounted() {
+        axios
+            .get(URL)
+            .then(response => {
+                this.cars = response.data;
+            })
+            .catch(e => {
+                this.errors.push(e);
+            });
+    }
 };
 </script>

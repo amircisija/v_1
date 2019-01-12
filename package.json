@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "date-fns": "^1.30.1",
+    "firebase": "^5.7.2",
     "register-service-worker": "^1.5.2",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
@@ -45,6 +47,10 @@
     "parserOptions": {
       "parser": "babel-eslint"
     }
+  },
+  "prettier": {
+    "tabWidth": 4,
+    "singleQuote": true
   },
   "postcss": {
     "plugins": {

@@ -30,23 +30,23 @@
 </template>
 
 <script>
-import axios from "axios";
-const URL = "http://www.json-generator.com/api/json/get/bVRGHHMYqG?indent=2";
+import axios from 'axios';
+const URL = 'http://www.json-generator.com/api/json/get/bVRGHHMYqG?indent=2';
 export default {
-  data() {
-    return {
-      anbieters: []
-    };
-  },
-  mounted() {
-    axios
-      .get(URL)
-      .then(response => {
-        this.anbieters = response.data;
-      })
-      .catch(e => {
-        this.errors.push(e);
-      });
-  }
+    data() {
+        return {
+            anbieters: []
+        };
+    },
+    mounted() {
+        axios
+            .get(URL)
+            .then(response => {
+                this.anbieters = response.data;
+            })
+            .catch(e => {
+                this.errors.push(e);
+            });
+    }
 };
 </script>

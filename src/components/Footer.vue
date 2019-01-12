@@ -1,5 +1,5 @@
 <template>
-  <v-footer app dark>
+  <v-footer app dark inset>
     <v-card class="flex" flat tile>
       <v-card-title class="blue darken-4">
         <strong class="subheading">Get connected with us on social networks!</strong>
@@ -22,14 +22,14 @@
 
 <script>
 export default {
-  data: () => ({
-    icons: [
-      "fab fa-facebook",
-      "fab fa-twitter",
-      "fab fa-google-plus",
-      "fab fa-linkedin",
-      "fab fa-instagram"
-    ]
-  })
+    data: () => ({
+        icons: [
+            'fab fa-facebook',
+            'fab fa-twitter',
+            'fab fa-google-plus',
+            'fab fa-linkedin',
+            'fab fa-instagram'
+        ]
+    })
 };
 </script>
