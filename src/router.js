@@ -4,14 +4,14 @@ import Dashboard from './views/Dashboard.vue';
 import Projects from './views/Projects.vue';
 import About from './views/About.vue';
 import Anbieter from './views/Anbieter.vue';
+import Cars from './views/pages/Cars.vue';
 
 Vue.use(Router);
 
 export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,
-    routes: [
-        {
+    routes: [{
             path: '/',
             name: 'dashboard',
             component: Dashboard
@@ -30,6 +30,11 @@ export default new Router({
             path: '/anbieter',
             name: 'anbieter',
             component: Anbieter
+        },
+        {
+            path: '/cars',
+            name: 'cars',
+            component: Cars
         }
     ]
 });

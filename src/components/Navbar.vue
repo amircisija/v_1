@@ -18,8 +18,9 @@
     <v-navigation-drawer
       app
       v-model="drawer"
-      class="blue darken-2 pt-4"
+      class="pt-4"
       fixed
+      stateless
       clipped
       :mini-variant.sync="mini"
     >
@@ -60,14 +61,15 @@ export default {
     data() {
         return {
             name: 'Admin',
-            drawer: false,
+            drawer: true,
             links: [
-                { icon: 'dashboard', text: 'Dashboard', route: '/' },
+                { icon: 'home', text: 'Dashboard', route: '/' },
                 { icon: 'folder', text: 'Projects', route: '/projects' },
                 { icon: 'person', text: 'Anbieter', route: '/anbieter' },
-                { icon: 'perm_identity', text: 'About', route: '/about' }
+                { icon: 'perm_identity', text: 'About', route: '/about' },
+                { icon: 'perm_identity', text: 'Cars', route: '/cars' }
             ],
-            mini: true,
+            mini: false,
             right: null
         };
     }

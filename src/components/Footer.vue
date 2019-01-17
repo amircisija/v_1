@@ -2,7 +2,7 @@
   <v-footer app dark inset>
     <v-card class="flex" flat tile>
       <v-card-title class="blue darken-4">
-        <strong class="subheading">Get connected with us on social networks!</strong>
+        <strong class="subheading">{{ appName }}</strong>
 
         <v-spacer></v-spacer>
 
@@ -23,6 +23,7 @@
 <script>
 export default {
     data: () => ({
+        appName: 'Strechlimo24.de',
         icons: [
             'fab fa-facebook',
             'fab fa-twitter',
