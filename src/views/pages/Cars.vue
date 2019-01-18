@@ -13,7 +13,7 @@
       </v-flex>
     </v-layout>
     <v-card
-      :class="`pa-3 booking--row status--${car.id}`"
+      :class="[ car.isAvailable ? 'light-green lighten-5 pa-3 ' : 'red lighten-5 pa-3 ' ]"
       v-for="car in cars"
       :key="car.id"
       transition="booking"
@@ -52,12 +52,9 @@
       <v-layout>
         <v-flex xs4>
           <v-switch
-            v-model="ex11"
-            label="success"
             color="success"
-            value="success"
-            hide-details
-            @click="changeIsAvailable"
+            :label="`Fahrzeug ist: ${car.isAvailable.toString()}`"
+            v-model="car.isAvailable"
           ></v-switch>
         </v-flex>
       </v-layout>
@@ -74,6 +71,7 @@ export default {
     data() {
         return {
             cars: [],
+            switch1: true,
             snackbar: false,
             ex11: 'success'
         };
@@ -81,6 +79,9 @@ export default {
     methods: {
         sortBy(val) {
             this.cars.sort((a, b) => (a[val] < b[val] ? -1 : 1));
+        },
+        changeStatus() {
+            this.cars.isAvailable = !this.cars.isAvailable;
         }
     },
     created() {

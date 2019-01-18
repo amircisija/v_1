@@ -3,15 +3,17 @@ import Router from 'vue-router';
 import Dashboard from './views/Dashboard.vue';
 import Projects from './views/Projects.vue';
 import About from './views/About.vue';
-import Anbieter from './views/Anbieter.vue';
+import AAnbieter from './views/AAnbieter.vue';
 import Cars from './views/pages/Cars.vue';
+import Login from './views/Login.vue';
 
 Vue.use(Router);
 
 export default new Router({
     mode: 'history',
     base: process.env.BASE_URL,
-    routes: [{
+    routes: [
+        {
             path: '/',
             name: 'dashboard',
             component: Dashboard
@@ -27,14 +29,19 @@ export default new Router({
             component: About
         },
         {
-            path: '/anbieter',
-            name: 'anbieter',
-            component: Anbieter
+            path: '/aanbieter',
+            name: 'aanbieter',
+            component: AAnbieter
         },
         {
             path: '/cars',
             name: 'cars',
             component: Cars
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: Login
         }
     ]
 });

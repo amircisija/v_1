@@ -31,7 +31,7 @@
           </v-list-tile-avatar>
 
           <v-list-tile-content>
-            <v-list-tile-title class="white--text">Welcome {{ name }}</v-list-tile-title>
+            <v-list-tile-title>Welcome {{ name }}</v-list-tile-title>
           </v-list-tile-content>
 
           <v-list-tile-action>
@@ -45,10 +45,10 @@
       <v-list class="pt-0" dense>
         <v-list-tile v-for="link in links" :key="link.text" router :to="link.route">
           <v-list-tile-action>
-            <v-icon class="white--text" v-text="link.icon"></v-icon>
+            <v-icon v-text="link.icon"></v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title class="white--text" v-text="link.text"></v-list-tile-title>
+            <v-list-tile-title v-text="link.text"></v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -65,7 +65,7 @@ export default {
             links: [
                 { icon: 'home', text: 'Dashboard', route: '/' },
                 { icon: 'folder', text: 'Projects', route: '/projects' },
-                { icon: 'person', text: 'Anbieter', route: '/anbieter' },
+                { icon: 'person', text: 'AAnbieter Old', route: '/aanbieter' },
                 { icon: 'perm_identity', text: 'About', route: '/about' },
                 { icon: 'perm_identity', text: 'Cars', route: '/cars' }
             ],
