@@ -13,7 +13,6 @@
   </div>
 </template>
 <script>
-import AddTodo from './AddTodo.vue';
 import TodoItem from './TodoItem.vue';
 export default {
     name: 'Todos',

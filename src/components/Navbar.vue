@@ -63,7 +63,8 @@ export default {
             name: 'Admin',
             drawer: true,
             links: [
-                { icon: 'home', text: 'Dashboard', route: '/' },
+                { icon: 'home', text: 'Landing page', route: '/' },
+                { icon: 'home', text: 'Dashboard', route: '/dashboard' },
                 { icon: 'folder', text: 'Projects', route: '/projects' },
                 { icon: 'person', text: 'AAnbieter Old', route: '/aanbieter' },
                 { icon: 'perm_identity', text: 'About', route: '/about' },

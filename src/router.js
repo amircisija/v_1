@@ -6,7 +6,8 @@ import About from './views/About.vue';
 import AAnbieter from './views/AAnbieter.vue';
 import Cars from './views/pages/Cars.vue';
 import Login from './views/Login.vue';
-
+import Home from './views/Home.vue';
+import Admin from './views/Admin.vue';
 Vue.use(Router);
 
 export default new Router({
@@ -15,29 +16,42 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'dashboard',
-            component: Dashboard
+            name: 'home',
+            component: Home
         },
         {
-            path: '/projects',
-            name: 'projects',
-            component: Projects
+            path: '/admin',
+            name: 'admin',
+            component: Admin,
+            children: [
+                {
+                    path: '/dashboard',
+                    name: 'dashboard',
+                    component: Dashboard
+                },
+                {
+                    path: '/projects',
+                    name: 'projects',
+                    component: Projects
+                },
+                {
+                    path: '/about',
+                    name: 'about',
+                    component: About
+                },
+                {
+                    path: '/aanbieter',
+                    name: 'aanbieter',
+                    component: AAnbieter
+                },
+                {
+                    path: '/cars',
+                    name: 'cars',
+                    component: Cars
+                }
+            ]
         },
-        {
-            path: '/about',
-            name: 'about',
-            component: About
-        },
-        {
-            path: '/aanbieter',
-            name: 'aanbieter',
-            component: AAnbieter
-        },
-        {
-            path: '/cars',
-            name: 'cars',
-            component: Cars
-        },
+
         {
             path: '/login',
             name: 'login',

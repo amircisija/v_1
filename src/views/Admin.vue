@@ -1,12 +1,25 @@
 <template>
-  <main id="app">
-    <router-view></router-view>
-  </main>
-</template>
+  <v-app class="grey lighten-4">
+    <Navbar/>
 
+    <v-content transition="slide-x-transition">
+      <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
+      <main class="pb-5">
+        <v-container grid-list-md>
+          <router-view></router-view>
+        </v-container>
+      </main>
+    </v-content>
+    <Footer/>
+  </v-app>
+</template>
 <script>
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import Todos from '@/components/Todos';
 export default {
     name: 'App',
+    components: { Navbar, Footer, Todos },
     data() {
         return {
             todos: [
@@ -42,4 +55,4 @@ p {
 body {
     font-family: 'Roboto', sans-serif;
 }
-</style>
+</style>    
