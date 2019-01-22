@@ -13,8 +13,8 @@ var config = {
 firebase.initializeApp(config);
 
 // Initialize firebase connection
-const database = firebase.firestore();
+const db = firebase.firestore();
 
-database.settings({ timestampsInSnapshots: true });
+db.settings({ timestampsInSnapshots: true });
 
-export default database;
+export default db;

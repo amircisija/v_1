@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <Nav/>
-    <Hero/>
-  </div>
+  <v-app>
+    <v-content>
+      <Nav/>
+      <Hero/>
+    </v-content>
+  </v-app>
 </template>
 <script>
 import Nav from '@/components/Nav.vue';

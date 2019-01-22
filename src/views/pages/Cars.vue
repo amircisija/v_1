@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import database from '@/firebase';
+import db from '@/firebase';
 
 import AddCar from '@/components/cars/add';
 export default {
@@ -85,7 +85,7 @@ export default {
         }
     },
     created() {
-        database.collection('cars').onSnapshot(res => {
+        db.collection('cars').onSnapshot(res => {
             const changes = res.docChanges();
 
             changes.forEach(change => {

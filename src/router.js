@@ -7,6 +7,7 @@ import AAnbieter from './views/AAnbieter.vue';
 import Cars from './views/pages/Cars.vue';
 import Login from './views/Login.vue';
 import Home from './views/Home.vue';
+import Results from './views/Results.vue';
 import Admin from './views/Admin.vue';
 Vue.use(Router);
 
@@ -18,6 +19,11 @@ export default new Router({
             path: '/',
             name: 'home',
             component: Home
+        },
+        {
+            path: '/results',
+            name: 'results',
+            component: Results
         },
         {
             path: '/admin',

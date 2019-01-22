@@ -68,7 +68,7 @@
 
 
 <script>
-import database from '@/firebase';
+import db from '@/firebase';
 
 import Popup from '@/components/Popup';
 export default {
@@ -85,7 +85,7 @@ export default {
         }
     },
     created() {
-        database.collection('anbieter').onSnapshot(res => {
+        db.collection('anbieter').onSnapshot(res => {
             const changes = res.docChanges();
 
             changes.forEach(change => {

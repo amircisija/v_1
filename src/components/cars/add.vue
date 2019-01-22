@@ -111,8 +111,7 @@ export default {
                     createdAt: format(this.createdAt, 'hh:mm DD MM YYYY')
                 };
 
-                database
-                    .collection('cars')
+                db.collection('cars')
                     .add(car)
                     .then(() => {
                         this.dialog = false;
